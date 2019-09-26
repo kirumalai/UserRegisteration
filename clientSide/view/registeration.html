@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../library/bootstrp.min.css">
+    <link rel="stylesheet" href="../library/registerStyle.css">
+
+    <script src="../library/jquery.min.js"></script>
+    <script src="../library/bootstrap.min.js"></script>
+
+    <script src="../handlers/registerationEventHandler.js"></script>
+    <script src="../handlers/validationHandler.js"></script>
+    <script src="../handlers/serviceHandler.js" async></script>
+    <script src="../helper/helper.js"></script>
+    <script src="../handlers/navigationHandler.js" async></script>
+    <script src="../storage/storageManager.js" async></script>
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-6 col-sm-12 col-lg-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Register your presence
+                </div>
+                <div class="panel-body">
+                    <form name="registerationForm" id="registerationForm">
+                        <div class="form-group">
+                            <label for="userName">User Name *</label>
+                            <input type="text" id="userName" placeholder="Enter user name" name="userName" class="form-control"  data-validation="required">
+                            <span id="error_name" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="psw"><b>Password *</b></label>
+                            <input type="password" placeholder="Enter Password" id="password" name="password" class="form-control" required>
+                            <span id="error_psw" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="psw-repeat"><b>Repeat Password *</b></label>
+                            <input type="password" placeholder="Repeat Password" id="repeatPassword" name="repeatPassword" class="form-control" required>
+                            <span id="error_rpsw" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                                <label for="email"><b>Email *</b></label>
+                                <input type="email" placeholder="Enter Email" id="email" class="form-control" name="email" data-validation="required">
+                                <span id="error_email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="age">Age *</label>
+                            <input id="age" name="age"  class="form-control" type="number" min="1" >
+                            <span id="error_age" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="gender">Gender</label>
+                            <select name="gender" id="gender" class="form-control">
+                                <option selected>Male</option>
+                                <option>Female</option>
+                                <option>Other</option>
+                            </select>
+                            <span id="error_gender" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="mobileNumber">Mobile Number *</label>
+                            <input type="tel" id="mobileNumber" name="mobileNumber" class="form-control" >
+                            <span id="error_phone" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="disc">Description</label>
+                            <textarea class="form-control" name="description" rows="3" id="description"></textarea>
+                        </div>
+
+                        <p>By creating an account you agree to our <a href="#">Terms & Privacy</a>.</p>
+                        <div class="text-center">
+                                <button id="signupButton" type="submit" class="col-md-12 btn btn-primary center" disabled="disabled">signup</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container signin">
+                <p>Already have an account? <a id="loginLink" href="#">login</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

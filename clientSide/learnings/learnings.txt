@@ -1,0 +1,130 @@
+.htaccess file
+***************
+ ".htaccess" file include the ability to password protect folders, ban users or allow users using IP addresses, stop directory listings, redirect users to another page or directory automatically, create and use custom error pages, change the way files with certain extensions are utilized, or even use a different file as the index file by specifying the file extension or specific file.
+
+What is .htaccess?
+********************
+.htaccess is a configuration file for use on web servers running the Apache Web Server software. When a .htaccess file is placed in a directory which is in turn 'loaded via the Apache Web Server', then the .htaccess file is detected and executed by the Apache Web Server software. These .htaccess files can be used to alter the configuration of the Apache Web Server software to enable/disable additional functionality and features that the Apache Web Server software has to offer. These facilities include basic redirect functionality, for instance if a 404 file not found error occurs, or for more advanced functions such as content password protection or image hot link prevention.
+
+
+// document.addEventListener('DOMContentLoaded', function () { }) = $(document).ready(function() { })
+
+
+Service call using AJAX:
+**************************
+
+// $.ajax({
+    //     url : url,
+    //     dataType : "jsonp",
+    //     headers: { "Content-Type":"application/json","Accept": "application/json","origin": "*" },
+    //     type : 'POST',
+    //     contentType: "application/json",
+    //     data : {"username" : "FirstName", "password" : "lastNAme"},
+    
+    //     success : function (data) {
+    //       console.log(data);
+    //     }, 
+    //     error : function (data, errorThrown) {
+    //       alert(errorThrown);
+    //     }
+    // });
+
+//     var request = new XMLHttpRequest();
+// request.open('GET', 'ajax/test.html', true);
+
+// request.onload = function (e) {
+//     if (request.readyState === 4) {
+
+//         // Check if the get was successful.
+
+//         if (request.status === 200) {
+//             console.log(request.responseText);
+//         } else {
+//             console.error(request.statusText);
+//         }
+//     }
+// };
+
+
+
+Table creation:
+*******************
+
+CREATE TABLE InternDetails (
+    studentID int NOT NULL AUTO_INCREMENT
+    userName char(25),
+    password char(50),
+    email char(40),
+    age char(5),
+    gender char(10),
+    mobileNumber char(15),
+    description char(250),
+    created  date,
+    PRIMARY KEY (studentID)
+);
+
+
+sampleData:
+******************
+
+function submitDetailsTest() {
+  var url = "http://localhost/api/user/signup";
+    $.post(url,
+  {
+    userName: "userName",
+    password: "password",
+    email: "email@gmail.com",
+    age: "12",
+    gender: "male",
+    mobileNumber: "9176150214",
+    description: "description"
+  },
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+    // naivgateToDashboard();
+  });
+}
+
+function submitDetailsTest1(inputData) {
+  var url = "http://localhost/api/user/signup";
+    $.post(url,
+  inputData,
+  function(data, status){
+    alert("Data: " + data + "\nStatus: " + status);
+    // naivgateToDashboard();
+  });
+}
+
+
+
+//    $("#userName").focusout(function() {
+//     validator.emptyValidation(this);
+//    });
+
+//    $("#password").focusout(function() {
+//     validator.passwordValidation(this);
+//    });
+
+//    $("#repeatPassword").focusout(function() {
+//     validator.repeatPasswordValidation(this);
+//    });
+
+//    $("#email").focusout(function() {
+//        validator.validate(this);
+//     //    validator.emailValidation(this);
+//    });
+
+//    $("#age").focusout(function() {
+//     validator.ageValidation(this);
+//    });
+
+//    $("#gender").focusout(function() {
+//         $(this).css("border-color", "#2eb82e");
+//    });
+
+//    $("#mobileNumber").focusout(function() {
+//        validator.phoneNumberValidation(this);
+//    });
+
+
+http://www.kodecrash.com/javascript/read-write-json-file-using-php/

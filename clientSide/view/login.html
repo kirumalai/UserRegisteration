@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../library/bootstrp.min.css">
+    <link rel="stylesheet" href="../library/registerStyle.css">
+
+    <script src="../library/jquery.min.js"></script>
+    <script src="../library/bootstrap.min.js"></script>
+
+    <script src="../handlers/loginEventHandler.js"></script>
+    <script src="../handlers/validationHandler.js"></script>
+    <script src="../handlers/serviceHandler.js"></script>
+    <script src="../handlers/navigationHandler.js"></script>
+    <script src="../helper/helper.js"></script>
+    <script src="../storage/storageManager.js" async></script>
+
+</head>
+<body>
+    <div class="row">
+        <div class="col-sm-12 col-lg-6 col-md-offset-3">
+            <div class="panel panel-primary">
+                <div class="panel-heading">Come on!! get In!!</div>
+                <div class="panel-body">
+                    <form name="loginForm" id="loginForm">
+                        <div class="form-group">
+                            <label for="email"><b>Email *</b></label>
+                            <input type="email" placeholder="Enter Email" id="email" class="form-control" name="email" data-validation="required">
+                            <span id="error_email" class="text-danger"></span>
+                        </div>
+                        <div class="form-group">
+                            <label for="psw"><b>Password *</b></label>
+                            <input type="password" placeholder="Enter Password" id="loginPassword" name="loginPassword" class="form-control" required>
+                            <span id="error_psw" class="text-danger"></span>
+                        </div>
+                        <div class="text-center">
+                                <button id="loginButton" type="submit" class="col-md-12 btn btn-primary center" disabled="disabled">login</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="container signin">
+                    <p>Don't have account? <a id="registerationLink" href="#">signup</a>.</p>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
