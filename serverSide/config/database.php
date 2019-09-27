@@ -9,12 +9,12 @@ class Database{
     private $password = "";
     public $conn;
 
-    private function createDBIFRequired() {
+    public function createDBIFRequired() {
         try {
-            $this->conn = new PDO("mysql:host=$servername", $username, $password);
+            $this->conn = new PDO("mysql:host=$this->host", $this->username, $this->password);
             // set the PDO error mode to exception
             $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-            $sql = "CREATE DATABASE IF NOT EXISTS $db_name";
+            $sql = "CREATE DATABASE IF NOT EXISTS $this->db_name";
             // use exec() because no results are returned
             $this->conn->exec($sql);
             }
@@ -28,6 +28,10 @@ class Database{
 
     private function createTableIFRequired() {
         try {
+
+            $this->conn = new PDO("mysql:host=$this->host;dbname=$this->db_name", $this->username, $this->password);
+            $this->conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
             $sql = "CREATE TABLE IF NOT EXISTS internDetails (
                 id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY, 
                 userName VARCHAR(30) NOT NULL,
@@ -50,8 +54,6 @@ class Database{
  
     // get the database connection
     public function getConnection(){
-
-        $this->createDBIFRequired(); 
         $this->conn = null;
  
         try{

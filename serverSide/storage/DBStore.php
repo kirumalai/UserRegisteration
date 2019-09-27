@@ -7,12 +7,13 @@ include_once '../config/database.php';
 class DBStore implements store {
 
     private $conn;
-    private $tableName = "InternDetails";
+    public $tableName = "internDetails";
     private $created;
     public $id;
 
     public function __construct(){
         $database = new Database();
+        $database->createDBIFRequired();
         $this->conn = $database->getConnection();
         $this->created = date('Y-m-d H:i:s');
     }
@@ -64,7 +65,7 @@ class DBStore implements store {
             // return OK;
             if($stmt->rowCount() > 0) {
                 $row = $stmt->fetch(PDO::FETCH_ASSOC);
-                $this->id = $row['studentID'];
+                $this->id = $row['id'];
                 return OK;
             } else {
                 return zeroRowReturned;

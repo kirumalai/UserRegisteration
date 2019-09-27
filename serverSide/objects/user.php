@@ -4,7 +4,6 @@ include_once '../base/backEndValidator.php';
 include_once '../storage/storageManager.php';
 
 class User{
-    public $tableName = "InternDetails";
     public $backEndValidator;
     private $storageManager;
     
@@ -39,9 +38,9 @@ class User{
 
     function login($credentials) {
         $query = "SELECT
-                    `studentID`, `email`, `password`, `created`
+                    `id`, `email`
                 FROM
-                    " . $this->tableName . " 
+                    " . $this->storageManager->DBStore->tableName . " 
                 WHERE
                     email='".$credentials->email."' AND password='".$credentials->loginPassword."'";
 

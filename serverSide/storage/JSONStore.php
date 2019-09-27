@@ -11,7 +11,6 @@ class JSONStore implements store {
                 if(file_exists($this->fileName)){
                     // Attempt to open the file
                     // $userDetailJsonFile = fopen($this->fileName, "a+");
-                    echo $this->fileName;
                     $userDetailsFromFile = file_get_contents($this->fileName);
                     $userDetailsArray = json_decode($userDetailsFromFile, true);
                     

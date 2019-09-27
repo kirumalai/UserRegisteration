@@ -1,24 +1,4 @@
 {
-    "ammaChelam8@gmail.com": {
-        "userName": "amma",
-        "password": "chellamC1",
-        "repeatPassword": "chellamC1",
-        "email": "ammaChelam8@gmail.com",
-        "age": "24",
-        "gender": "Female",
-        "mobileNumber": "9176150214",
-        "description": "amma cellar desc"
-    },
-    "comm@gmail.com": {
-        "userName": "amma",
-        "password": "chellamC1",
-        "repeatPassword": "chellamC1",
-        "email": "comm@gmail.com",
-        "age": "24",
-        "gender": "Female",
-        "mobileNumber": "9176150214",
-        "description": "amma cellar desc"
-    },
     "com2@gmail.com": {
         "userName": "amma",
         "password": "chellamC1",
@@ -28,5 +8,15 @@
         "gender": "Female",
         "mobileNumber": "9176150214",
         "description": "amma cellar desc"
+    },
+    "chella1@gmail.com": {
+        "userName": "chela",
+        "password": "canItouch1",
+        "repeatPassword": "canItouch1",
+        "email": "chella1@gmail.com",
+        "age": "23",
+        "gender": "Female",
+        "mobileNumber": "9176150214",
+        "description": "test description"
     }
 }
